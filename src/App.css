@@ -85,6 +85,11 @@
   justify-content: center;
 }
 
+.fruit {
+  display: grid;
+  place-items: center;
+}
+
 .description {
   display: flex;
   flex-direction: column;
