@@ -20,7 +20,7 @@
   position: absolute;
   display: block;
   color: white;
-  opacity: 0.5;
+  opacity: 0.4;
   font-size: 1.5rem;
   padding: 0.5rem;
   pointer-events: none;
@@ -77,4 +77,35 @@
 .search_submit:hover,
 .search_submit:focus {
   background-color: #484848;
+}
+
+.fruit_div {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  max-width: min-content;
+  gap: 0.25rem;
+}
+
+.description p {
+  margin: 0.25rem 0 0 0;
+}
+
+.description h3 {
+  margin: 0 0 1rem 0;
+}
+
+.description_title {
+  text-decoration: underline;
+}
+
+.description_item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }

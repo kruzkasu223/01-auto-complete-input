@@ -560,3 +560,5 @@ export const fruits = [
     },
   },
 ]
+
+export type TFruit = typeof fruits[number]
