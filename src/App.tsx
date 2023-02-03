@@ -22,12 +22,6 @@ function App() {
     return firstName
   }, [query, fruits])
 
-  const fetchingFruitsByQuery = async (query = "") => {
-    // in addition we can use abort controller if it's real fetch request...
-    const data = await fetchFruitsByQuery(query)
-    setFruits(data)
-  }
-
   const handleSubmit = async (query: string) => {
     if (!query) return
     const data = await fetchFruitByName(query)
@@ -38,8 +32,19 @@ function App() {
   }
 
   useEffect(() => {
+    let isCurrent = true
     if (!debouncedQuery) return setFruits([])
-    fetchingFruitsByQuery(debouncedQuery)
+
+    // in addition we can use abort controller if it's real fetch request...
+    fetchFruitsByQuery(debouncedQuery)
+      .then((data) => {
+        if (isCurrent) setFruits(data)
+      })
+      .catch(console.log)
+
+    return () => {
+      isCurrent = false
+    }
   }, [debouncedQuery])
 
   return (
