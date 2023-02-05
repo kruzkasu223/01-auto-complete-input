@@ -4,4 +4,4 @@ This project is all about creating a user-friendly and efficient auto-complete i
 
 I will use [React](https://reactjs.org/) with [TypeScript](https://www.typescriptlang.org/) and [vite bundler](https://vitejs.dev/). and will use data from this fruit api [https://fruityvice.com/](https://fruityvice.com/) and simulate api request locally.
 
-If you are interested checkout [#28Days28Projects](https://github.com/kruzkasu223/28Days28Projects)
+If you are interested, checkout [#28Days28Projects](https://github.com/kruzkasu223/28Days28Projects) for more projects like this.
